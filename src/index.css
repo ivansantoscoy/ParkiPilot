@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,800&family=Manrope:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #00132e;
+  --color-surface: #00132e;
+  --color-surface-container-low: #001b3d;
+  --color-surface-container: #041f41;
+  --color-surface-container-high: #122a4c;
+  --color-surface-container-highest: #1e3558;
+  --color-surface-bright: #23395d;
+  
+  --color-primary: #fff6df;
+  --color-primary-container: #ffd700;
+  --color-on-primary: #3a3000;
+  --color-primary-fixed: #ffe16d;
+  --color-primary-fixed-dim: #e9c400;
+  
+  --color-on-surface: #d6e3ff;
+  --color-on-surface-variant: #d0c6ab;
+  --color-outline: #999077;
+  --color-outline-variant: #4d4732;
+  
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  
+  --color-tertiary: #defcff;
+  --color-tertiary-container: #00f1ff;
+  --color-on-tertiary-container: #006a70;
+  
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  min-height: max(884px, 100dvh);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.pulse-ring {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.05); }
+}
+
+.bg-mesh {
+  background-color: #00132e;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(4, 31, 65, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(35, 57, 93, 0.3) 0px, transparent 50%);
+}
+
+/* map-bg removed in favor of img tag with referrerPolicy */
+
+.bg-solar-gradient {
+  background: linear-gradient(135deg, #ffe16d 0%, #ffd700 100%);
+}
